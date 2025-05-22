@@ -1,12 +1,11 @@
+res://mob.gd
+res://DamageText.gd
+res://bullet.gd
+res://damage_text.tscn
 res://player.tscn
-res://gun.gd
 res://survivors_game.tscn
 res://pine_tree.tscn
 res://mob.tscn
 res://gun.tscn
-res://bullet.gd
 res://bullet.tscn
-res://mob.gd
-res://player.gd
 res://characters/slime/slime.tscn
-res://survivors_game.gd

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var health = 30
 @onready var player = get_node("/root/Game/Player")
+var damage_text = preload("res://damage_text.tscn")
 
 # function to play the walk animation
 func _ready():
@@ -15,9 +16,14 @@ func _physics_process(delta):
 	velocity = direction * 300.0
 	move_and_slide()
  # function to take damage
-func take_damage():
-	health -= 10
+func take_damage(damage_amount: float = 10.0):
+	health -= damage_amount
 	%Slime.play_hurt()
+	var damage_text_instance = damage_text.instantiate()
+	#set the damage text to the damage amount from bullet script
+	damage_text_instance.text = str(damage_amount)
+	damage_text_instance.global_position = global_position
+	get_parent().add_child(damage_text_instance)
 
 	if health <= 0:
 		queue_free()
