@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dak5k5677vdol"]
+[gd_scene load_steps=9 format=3 uid="uid://dak5k5677vdol"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://bxd81sce77eq3" path="res://player.gd" id="1_onrkg"]
@@ -23,6 +23,9 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sweqy"]
+bg_color = Color(0.807843, 0, 0.270588, 1)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
@@ -61,7 +64,7 @@ theme_override_font_sizes/font_size = 20
 text = "Level: 1"
 horizontal_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 offset_left = -58.0
 offset_top = -122.0
@@ -71,3 +74,11 @@ theme_override_styles/background = SubResource("StyleBoxFlat_i3pqv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_hqtel")
 value = 100.0
 show_percentage = false
+
+[node name="ExpBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -887.0
+offset_top = -537.0
+offset_right = 814.0
+offset_bottom = -460.0
+theme_override_styles/background = SubResource("StyleBoxFlat_sweqy")

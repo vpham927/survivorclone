@@ -1,15 +1,15 @@
 extends Area2D
 
 var travelled_distance = 0.0
-var damage = 10.0  # Base damage value
+var damage = 10  # Base damage value
 
 func set_damage_from_level(level: int) -> void:
-	damage = 10.0 + (level - 1) * 5.0  # Increase damage by 5 per level
+	damage = 10 + (level - 1) * 5  # Increase damage by 5 per level
 	print("Bullet created with damage: ", damage)
 
 func _physics_process(delta: float) -> void:
-	const SPEED = 500.0
-	const RANGE = 1200.0
+	const SPEED = 500
+	const RANGE = 1200
 	var direction = Vector2.RIGHT.rotated(rotation)
 	position += direction * SPEED * delta
 	 #destroy bullet after travelled distance

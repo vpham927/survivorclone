@@ -1,4 +1,5 @@
 extends Label
+#This script is used to display damage text on the screen
 
 @export var text_speed := Vector2(0, -30)
 @export var fade_out_timer := 1.0

@@ -16,7 +16,7 @@ func _physics_process(delta):
 	velocity = direction * 300.0
 	move_and_slide()
  # function to take damage
-func take_damage(damage_amount: float = 10.0):
+func take_damage(damage_amount: int = 10):
 	health -= damage_amount
 	%Slime.play_hurt()
 	var damage_text_instance = damage_text.instantiate()
@@ -31,7 +31,7 @@ func take_damage(damage_amount: float = 10.0):
 		var smoke = SMOKE_SCENCE.instantiate()
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
-		player.gain_experience(10)
+		player.gain_experience(50)
 		print(player.experience)
 		
 		
