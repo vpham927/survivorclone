@@ -6,6 +6,7 @@ signal level_increased(new_level)
 var health = 100.0
 var experience = 0
 var level = 1
+var crit_chance = 0.5
 var experience_to_next_level = 100  # Base XP needed for first level up
 
 func get_level() -> int:

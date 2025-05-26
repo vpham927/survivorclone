@@ -10,3 +10,5 @@ res://mob.tscn
 res://survivors_game.gd
 res://bullet.gd
 res://characters/slime/slime.tscn
+res://player.gd
+res://DamageText.gd
