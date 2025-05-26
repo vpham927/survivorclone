@@ -7,7 +7,7 @@ var damage_text = preload("res://damage_text.tscn")
 
 # function to play the walk animation
 func _ready():
-	%Slime.play_walk()
+	pass#%Slime.play_walk()
 
 func _physics_process(delta):
 	# give the global position of the mob to the player
@@ -19,7 +19,7 @@ func _physics_process(delta):
  # function to take damage
 func take_damage(damage_amount: int = 10):
 	stats.health -= damage_amount
-	%Slime.play_hurt()
+	#%Slime.play_hurt()
 	var damage_text_instance = damage_text.instantiate()
 	#set the damage text to the damage amount from bullet script
 	damage_text_instance.text = str(damage_amount)

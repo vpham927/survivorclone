@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1xflaqrn22qo"]
+
+[ext_resource type="Script" uid="uid://d2ya00h8chpqa" path="res://mob_2.gd" id="1_ue6fr"]
+[ext_resource type="Script" uid="uid://dia6mxfr62fi0" path="res://resources/enemy.gd" id="2_kcddg"]
+
+[sub_resource type="Resource" id="Resource_kcddg"]
+script = ExtResource("2_kcddg")
+health = 10
+damage = 100
+speed = 500
+experience_reward = 500
+spawn_rate = 10
+metadata/_custom_type_script = "uid://dia6mxfr62fi0"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yf0v"]
+size = Vector2(42, 42)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_ue6fr")
+stats = SubResource("Resource_kcddg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_5yf0v")

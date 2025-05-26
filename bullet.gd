@@ -5,7 +5,8 @@ var damage = 10  # Base damage value
 
 func set_damage_from_level(level: int) -> void:
 	damage = 10 + (level - 1) * 5  # Increase damage by 5 per level
-	print("Bullet created with damage: ", damage)
+	# Commented out because it was spamming the console
+	# print("Bullet created with damage: ", damage)
 
 func _physics_process(delta: float) -> void:
 	const SPEED = 500
